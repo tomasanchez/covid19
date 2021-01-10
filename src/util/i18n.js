@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationEN from '../locales/en/translation.json';
 import translationPT from '../locales/pt/translation.json';
+import translationES from '../locales/es/translation.json';
 
 const SUPPORTED_LANGUAGES = {
   en: {
@@ -16,6 +17,11 @@ const SUPPORTED_LANGUAGES = {
     translation: translationPT,
     code: 'pt',
     textKey: 'shell.button.user.settings.item.languageSwitch.pt',
+  },
+  es: {
+    translation: translationES,
+    code: 'es-AR',
+    textKey: 'shell.button.user.settings.item.languageSwitch.es',
   },
 };
 
