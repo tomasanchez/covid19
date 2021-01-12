@@ -9,15 +9,17 @@ const TodoList = lazy(() => import('../pages/Todo/List/TodoList'));
 const TodoEdit = lazy(() => import('../pages/Todo/Edit/TodoEdit'));
 const NotFound = lazy(() => import('../pages/Fallback/NotFound'));
 const Buggy = lazy(() => import('../pages/Fallback/Buggy'));
+const Dashboard = lazy(() => import('../pages/Overview/Dashboard/Dashboard'));
 
 const Routes = () => {
   return (
     <Suspense fallback={<BusyIndicator active />}>
       <Switch>
-        <Redirect path={getUrl('HOME')} exact to={getUrl('TODO_LIST')} />
+        <Redirect path={getUrl('HOME')} exact to={getUrl('OVERVIEW')} />
         <RouteWithAuthorizationRestriction allowedAuthorities={['canAccessTodoListPage']} authorityKey="permissions" path={getUrl('TODO_LIST')} component={TodoList} />
         <RouteWithAuthorizationRestriction allowedAuthorities={['canAccessTodoEditPage']} authorityKey="permissions" path={getUrl('TODO_EDIT')} component={TodoEdit} />
         <Route path={getUrl('BUGGY')} exact component={Buggy} />
+        <Route path={getUrl('OVERVIEW')} exact component={Dashboard} />
         <Route path={getUrl('NOT_FOUND')} exact component={NotFound} />
         <Route path={getUrl('ANY')} component={NotFound} />
       </Switch>

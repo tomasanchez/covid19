@@ -2,6 +2,7 @@ import { getUrl as getUrlProvider } from '../URLProvider';
 
 const URLs = {
   HOME: '/',
+  OVERVIEW: '/overview',
   TODO_DETAIL: '/todo/detail/:id',
   TODO_EDIT: '/todo/edit/:id',
   TODO_LIST: '/todo/all',

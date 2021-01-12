@@ -10,6 +10,7 @@
     "@ui5/webcomponents-fiori": "1.0.0-rc.11",
     "@ui5/webcomponents-icons": "1.0.0-rc.11",
     "@ui5/webcomponents-react": "^0.13.0",
+    "@ui5/webcomponents-react-charts": "^0.13.1",
     "axios": "^0.20.0",
     "formik": "^2.1.7",
     "i18next": "^19.7.0",
