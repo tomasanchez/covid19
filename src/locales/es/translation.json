@@ -21,5 +21,12 @@
   "page.notfound.text": "Hmmm, podriamos encontrar esta pagina",
   "page.notfound.alt": "No encontrado",
   "page.fallback.reload.text": "Recargue esta pagina",
-  "components.navback.text": "Atras"
+  "components.navback.text": "Atras",
+  "Asia": "Asia",
+  "North America": "América del Norte",
+  "South America": "América del Sur",
+  "Europe": "Europa",
+  "Africa": "África",
+  "Australia/Oceania": "Oceania",
+  "description.population": "Poblacion:\t"
 }

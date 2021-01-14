@@ -21,5 +21,15 @@
   "page.notfound.text": "Hmmm, we could find this URL",
   "page.notfound.alt": "Not Found",
   "page.fallback.reload.text": "Reload this page",
-  "components.navback.text": "Back"
+  "components.navback.text": "Back",
+  "Asia": "Asia",
+  "North America": "North America",
+  "South America": "South America",
+  "Europe": "Europe",
+  "Africa": "Africa",
+  "Australia/Oceania": "Oceania",
+  "description.population": "Population:\t",
+  "continentsCardHeader": "Around the Globe",
+  "continentsCardSubHeader": "Today new cases",
+  "continentsCardTol": "List of continents"
 }

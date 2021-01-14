@@ -10,6 +10,7 @@ import { getUrl } from '../../util/browser/BrowserProvider';
 import PopoverListItems from '../Popover/List/PopoverListItems';
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import { Icon } from '@ui5/webcomponents-react';
 
 const style = {
   shell: {
@@ -48,9 +49,9 @@ const Shell = ({ title, ...props }) => {
         data-testid="shell-wrapper"
         primaryTitle={title}
         style={style.shell}
-        logo={<img alt={t('shell.logo.alt')} src="https://sap.github.io/ui5-webcomponents/assets/images/sap-logo-svg.svg" />}
+        logo={<Icon name="overview-chart" tooltip={t('logo.tooltip')} style={{ color: '#842A2A', 'font-weight': 'bold' }} />}
         onLogoClick={() => history.push(getUrl('HOME'))}
-        profile={<Avatar icon="customer" shape={AvatarShape.Circle} size={AvatarSize.S} />}
+        profile={<Avatar icon="settings" shape={AvatarShape.Circle} size={AvatarSize.S} />}
         onProfileClick={(e) => popoverConfigItemsRef.current.openBy(e.detail.targetRef)}
         {...props}
       />
