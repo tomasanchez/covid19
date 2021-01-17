@@ -49,7 +49,7 @@ const Shell = ({ title, ...props }) => {
         data-testid="shell-wrapper"
         primaryTitle={title}
         style={style.shell}
-        logo={<Icon name="overview-chart" tooltip={t('logo.tooltip')} style={{ color: '#842A2A', 'font-weight': 'bold' }} />}
+        logo={<Icon name="overview-chart" tooltip={t('logo.tooltip')} showTooltip="true" style={{ color: '#842A2A', fontWeight: 'bold' }} />}
         onLogoClick={() => history.push(getUrl('HOME'))}
         profile={<Avatar icon="settings" shape={AvatarShape.Circle} size={AvatarSize.S} />}
         onProfileClick={(e) => popoverConfigItemsRef.current.openBy(e.detail.targetRef)}

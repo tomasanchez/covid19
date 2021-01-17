@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@ui5/webcomponents-react/lib/Card';
-import { FlexBox, Icon, Title, TitleLevel, ValueState } from '@ui5/webcomponents-react';
+import { Icon } from '@ui5/webcomponents-react';
 import ContinetsList from './ContinentsList';
 
 const style = {
@@ -28,7 +28,7 @@ const ContinetsCard = () => {
   return (
     <Card
       heading={t('continentsCardHeader')}
-      avatar={<Icon name="world" />}
+      avatar={<Icon name="globe" />}
       subheading={t('continentsCardSubHeader')}
       style={style.countryCard}
       headerInteractive

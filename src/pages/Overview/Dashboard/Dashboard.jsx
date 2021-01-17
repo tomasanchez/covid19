@@ -6,6 +6,7 @@ import { FlexBox } from '@ui5/webcomponents-react/lib/FlexBox';
 import { Card } from '@ui5/webcomponents-react/lib/Card';
 import ContinetsCard from '../../../components/Cards/ContinentsCard/ContinentsCard';
 import { Title } from '@ui5/webcomponents-react/lib/Title';
+import MapView from '../../../components/Cards/Map/Map';
 
 const Dashboard = () => {
   const history = useHistory();
@@ -16,8 +17,9 @@ const Dashboard = () => {
       <Helmet title={t('dashboard.helmet.title')} />
       <FlexBox>
         <ContinetsCard />
-        <Card heading="Dashboard2" style={{ width: '300px' }}></Card>
+        <Card heading="Dashboard2" style={{ width: '200px', height: '500px' }}></Card>
       </FlexBox>
+      <MapView />
     </>
   );
 };
