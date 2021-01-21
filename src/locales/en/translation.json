@@ -30,6 +30,7 @@
   "Australia/Oceania": "Oceania",
   "description.population": "Population:\t",
   "continentsCardHeader": "Around the Globe",
-  "continentsCardSubHeader": "Today new cases",
+  "continentsCardSubHeaderList": "Today new cases",
+  "continentsCardSubHeaderChart": "Total Cases",
   "continentsCardTol": "List of continents"
 }

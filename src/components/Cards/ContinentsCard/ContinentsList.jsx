@@ -20,16 +20,21 @@ const style = {
   },
 };
 
-const ContinentsList = () => {
-  const [aContinents, setEntitySet] = useState([]);
-
+const ContinentsList = (items) => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    Request.read('ContinentsSet').then((oResponse) => {
-      setEntitySet(oResponse.data);
-    });
-  });
+  const [aContinents, setEntitySet] = useState([]);
+
+  useEffect(
+    () => {
+      if (aContinents.length === 0) {
+        debugger;
+        setEntitySet(items.items);
+      }
+    },
+    aContinents.length,
+    items.items,
+  );
 
   return (
     <List>
@@ -46,7 +51,7 @@ const ContinentsList = () => {
           type="Inactive"
         >
           <FlexBox>
-            <Title level={TitleLevel.H4}>{t(oContinent.continent)}</Title>
+            <Title level={TitleLevel.H4}>{oContinent.continent}</Title>
           </FlexBox>
           <Icon name="group" />
         </StandardListItem>

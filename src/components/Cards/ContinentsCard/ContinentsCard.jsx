@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@ui5/webcomponents-react/lib/Card';
 import { Icon } from '@ui5/webcomponents-react';
 import ContinetsList from './ContinentsList';
+import ContinentsChart from './ContinentsChart';
+import Request from '../../../util/api/engine/Request';
 
 const style = {
   countryCard: {
-    width: '20rem',
+    width: '40vw',
+    height: '62vh',
   },
 
   continentItem: {
-    height: '3.5rem',
+    height: '3,5rem',
   },
 
   emptySpace: {
@@ -21,21 +24,33 @@ const style = {
 const ContinetsCard = () => {
   const { t } = useTranslation();
 
-  const handleHeading = () => {
-    console.log('Click');
+  const [bList, changeContent] = useState(false);
+  const [aContinents, setEntitySet] = useState([]);
+
+  const onChangeView = () => {
+    changeContent(!bList);
   };
+
+  useEffect(() => {
+    if (aContinents.length === 0) {
+      Request.read('ContinentsSet').then((oResponse) => {
+        oResponse.data.forEach((oContinent) => (oContinent.continent = t(oContinent.continent)));
+        setEntitySet(oResponse.data);
+      });
+    }
+  });
 
   return (
     <Card
       heading={t('continentsCardHeader')}
       avatar={<Icon name="globe" />}
-      subheading={t('continentsCardSubHeader')}
+      subheading={bList ? t('continentsCardSubHeaderList') : t('continentsCardSubHeaderChart')}
       style={style.countryCard}
       headerInteractive
-      onHeaderClick={handleHeading}
+      onHeaderClick={onChangeView}
       tooltip={t('continentsCardTol')}
     >
-      <ContinetsList />
+      {bList ? <ContinetsList items={aContinents} /> : <ContinentsChart items={aContinents} />}
     </Card>
   );
 };
