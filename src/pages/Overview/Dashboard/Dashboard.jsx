@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Helmet title={t('dashboard.helmet.title')} />
+      <Helmet title={t('helmet.title.dashboard.overview')} />
       <FlexBox justifyContent={FlexBoxJustifyContent.SpaceAround} style={spacing.sapUiContentPadding} wrap={FlexBoxWrap.Wrap}>
         <ContinetsCard />
         <CountriesCard />
