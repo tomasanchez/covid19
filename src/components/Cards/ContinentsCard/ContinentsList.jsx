@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { List } from '@ui5/webcomponents-react/lib/List';
 import { StandardListItem } from '@ui5/webcomponents-react/lib/StandardListItem';
-import { FlexBox, Icon, Title, TitleLevel } from '@ui5/webcomponents-react';
-import Request from '../../../util/api/engine/Request';
+import { FlexBox, Icon, Loader, Title, TitleLevel } from '@ui5/webcomponents-react';
 import Formatter from '../../../util/model/Formatter';
 
 const style = {
@@ -12,32 +11,25 @@ const style = {
   },
 
   continentItem: {
-    height: '3.5rem',
-  },
-
-  emptySpace: {
-    paddingTop: '44px',
+    height: '4rem',
   },
 };
 
-const ContinentsList = (items) => {
+const ContinentsList = ({ items, loading }) => {
   const { t } = useTranslation();
 
   const [aContinents, setEntitySet] = useState([]);
 
-  useEffect(
-    () => {
-      if (aContinents.length === 0) {
-        debugger;
-        setEntitySet(items.items);
-      }
-    },
-    aContinents.length,
-    items.items,
-  );
+  useEffect(() => {
+    if (aContinents.length === 0) {
+      var aResults = items.map((i) => i);
+      setEntitySet(aResults);
+    }
+  }, [aContinents.length, items]);
 
   return (
     <List>
+      {loading && <Loader />}
       {aContinents.map((oContinent, iKey) => (
         <StandardListItem
           key={iKey}
@@ -51,7 +43,7 @@ const ContinentsList = (items) => {
           type="Inactive"
         >
           <FlexBox>
-            <Title level={TitleLevel.H4}>{oContinent.continent}</Title>
+            <Title level={TitleLevel.H4}>{t(oContinent.continent)}</Title>
           </FlexBox>
           <Icon name="group" />
         </StandardListItem>

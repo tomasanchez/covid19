@@ -8,8 +8,8 @@ import Request from '../../../util/api/engine/Request';
 
 const style = {
   countryCard: {
-    width: '40vw',
-    height: '62vh',
+    width: '400px',
+    height: '30rem',
   },
 
   continentItem: {
@@ -25,20 +25,25 @@ const ContinetsCard = () => {
   const { t } = useTranslation();
 
   const [bList, changeContent] = useState(false);
+  const [bLoading, setLoading] = useState(false);
   const [aContinents, setEntitySet] = useState([]);
 
   const onChangeView = () => {
-    changeContent(!bList);
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      changeContent(!bList);
+    }, 1000);
   };
 
   useEffect(() => {
     if (aContinents.length === 0) {
       Request.read('ContinentsSet').then((oResponse) => {
-        oResponse.data.forEach((oContinent) => (oContinent.continent = t(oContinent.continent)));
         setEntitySet(oResponse.data);
       });
     }
-  });
+  }, [aContinents.length, t]);
 
   return (
     <Card
@@ -50,7 +55,7 @@ const ContinetsCard = () => {
       onHeaderClick={onChangeView}
       tooltip={t('continentsCardTol')}
     >
-      {bList ? <ContinetsList items={aContinents} /> : <ContinentsChart items={aContinents} />}
+      {bList ? <ContinetsList items={aContinents} loading={bLoading} /> : <ContinentsChart items={aContinents} loading={bLoading} />}
     </Card>
   );
 };
