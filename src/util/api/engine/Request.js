@@ -2,7 +2,8 @@ import axios from 'axios';
 
 const URLs = {
   BASEURL: `https://disease.sh/v3/covid-19/`,
-  ContinentsSet: '/continents?sort=todayCases',
+  ContinentsSet: '/continents?yesterday=true&sort=todayCases',
+  TopCountriesPerCasesSet: '/countries?sort=cases',
 };
 
 const Api = axios.create({

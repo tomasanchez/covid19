@@ -26,6 +26,7 @@
     "react-query-devtools": "^2.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-world-flags": "^1.4.0",
     "yup": "^0.32.8"
   },
   "scripts": {

@@ -32,5 +32,7 @@
   "continentsCardHeader": "Around the Globe",
   "continentsCardSubHeaderList": "Today new cases",
   "continentsCardSubHeaderChart": "Total Cases",
-  "continentsCardTol": "List of continents"
+  "continentsCardTol": "List of continents",
+  "countriesCardHeader": "Countries with more cases",
+  "listRecoveredLabel": "Recovered %"
 }
