@@ -3,8 +3,8 @@
     "static/js/0.c81873b8.chunk.js": "/covid19/static/js/0.c81873b8.chunk.js",
     "static/js/0.c81873b8.chunk.js.map": "/covid19/static/js/0.c81873b8.chunk.js.map",
     "main.css": "/covid19/static/css/main.89c06877.chunk.css",
-    "main.js": "/covid19/static/js/main.be5d258c.chunk.js",
-    "main.js.map": "/covid19/static/js/main.be5d258c.chunk.js.map",
+    "main.js": "/covid19/static/js/main.3485abb6.chunk.js",
+    "main.js.map": "/covid19/static/js/main.3485abb6.chunk.js.map",
     "runtime-main.js": "/covid19/static/js/runtime-main.3b0be508.js",
     "runtime-main.js.map": "/covid19/static/js/runtime-main.3b0be508.js.map",
     "static/js/3.a10952d7.chunk.js": "/covid19/static/js/3.a10952d7.chunk.js",
@@ -33,6 +33,6 @@
     "static/js/runtime-main.3b0be508.js",
     "static/js/3.a10952d7.chunk.js",
     "static/css/main.89c06877.chunk.css",
-    "static/js/main.be5d258c.chunk.js"
+    "static/js/main.3485abb6.chunk.js"
   ]
 }
