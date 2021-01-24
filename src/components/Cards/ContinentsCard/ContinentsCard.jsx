@@ -5,11 +5,13 @@ import { Icon } from '@ui5/webcomponents-react/lib/Icon';
 import ContinetsList from './ContinentsList';
 import ContinentsChart from './ContinentsChart';
 import Request from '../../../util/api/engine/Request';
+import ContinentsKPIs from './ContinentsKPIs';
 
 const style = {
   continentsCard: {
     width: '400px',
     height: '30rem',
+    'margin-bottom': '1rem',
   },
 };
 
@@ -38,17 +40,20 @@ const ContinetsCard = () => {
   }, [aContinents.length]);
 
   return (
-    <Card
-      heading={t('continentsCardHeader')}
-      avatar={<Icon name="globe" />}
-      subheading={bList ? t('continentsCardSubHeaderList') : t('continentsCardSubHeaderChart')}
-      style={style.continentsCard}
-      headerInteractive
-      onHeaderClick={onChangeView}
-      tooltip={t('continentsCardTol')}
-    >
-      {bList ? <ContinetsList items={aContinents} loading={bLoading} /> : <ContinentsChart items={aContinents} loading={bLoading} />}
-    </Card>
+    <>
+      <Card
+        heading={t('continentsCardHeader')}
+        avatar={<Icon name="globe" />}
+        subheading={bList ? t('continentsCardSubHeaderList') : t('continentsCardSubHeaderChart')}
+        style={style.continentsCard}
+        headerInteractive
+        onHeaderClick={onChangeView}
+        tooltip={t('continentsCardTol')}
+      >
+        {bList ? <ContinetsList items={aContinents} loading={bLoading} /> : <ContinentsChart items={aContinents} loading={bLoading} />}
+      </Card>
+      <ContinentsKPIs items={aContinents} />
+    </>
   );
 };
 

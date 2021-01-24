@@ -31,9 +31,18 @@
   "Australia/Oceania": "Oceania",
   "description.population": "Population:\t",
   "continentsCardHeader": "Around the Globe",
-  "continentsCardSubHeaderList": "Today new cases",
-  "continentsCardSubHeaderChart": "Total Cases",
+  "continentsCardSubHeaderList": "Today new cases - Press to view chart",
+  "continentsCardSubHeaderChart": "Total Cases - Press to view list",
   "continentsCardTol": "List of continents",
   "countriesCardHeader": "Countries with more cases",
-  "listRecoveredLabel": "Recovered %"
+  "listRecoveredLabel": "Recovered %",
+  "casesKPITitle": "Covid-19 Cases",
+  "counterKPI": "Today",
+  "casesKPIUnit": "Cases",
+  "recoveredKPITitle": "Recovered",
+  "recoveredKPIUnit": "Patients",
+  "deathsKPITTitle": "Deceases",
+  "deathsKPIUnit": "Deaths",
+  "criticalKPITitle": "Critical Cases",
+  "criticalKPISubtitle": "Per one million"
 }

@@ -1,7 +1,7 @@
 import { getUrl as getUrlProvider } from '../URLProvider';
 
 const URLs = {
-  HOME: '/covid19',
+  HOME: '/covid19/',
   OVERVIEW: '/covid19/overview',
   TODO_DETAIL: '/todo/detail/:id',
   TODO_EDIT: '/todo/edit/:id',
