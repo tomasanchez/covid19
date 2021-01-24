@@ -9,14 +9,13 @@ import CountriesTable from './CountriesTable';
 const style = {
   countriesCard: {
     width: '400px',
-    height: '25.5rem',
+    height: '25.15rem',
     marginBottom: '1rem',
   },
 
   allCountriesCard: {
     width: '600px',
-    height: '25.5rem',
-    marginBottom: '1rem',
+    height: '27.35rem',
   },
 };
 

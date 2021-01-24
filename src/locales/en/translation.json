@@ -1,11 +1,12 @@
 {
   "app.generics.close": "Close",
-  "helmet.title.app": "TodoList App",
+  "helmet.title.app": "Covid-19 Pandemic Dashboard",
   "helmet.title.error": "Buggy Component - Covid-19 Pandemic Dashboard",
   "helmet.title.notfound": "NotFound - Covid-19 Pandemic Dashboard",
   "helmet.title.dashboard.overview": "Covid-19 Pandemic - Overview",
   "shell.title": "Pandemic Dashboard",
   "shell.logo.alt": "SARS COVID-19",
+  "logo.tooltip": "CoV-19",
   "shell.button.user.settings": "User Settings",
   "shell.button.user.settings.item.themeSwitch": "Theme",
   "shell.button.user.settings.item.themeSwitch.option.default": "Default",
@@ -47,5 +48,6 @@
   "criticalKPISubtitle": "Per one million",
   "allCountriesCardHeader": "Situation by Country",
   "countryColumnHeader": "Country",
-  "casesColumnHeader": "Cumulative Cases"
+  "casesColumnHeader": "Cumulative Cases",
+  "loadingFlag": "country flag"
 }

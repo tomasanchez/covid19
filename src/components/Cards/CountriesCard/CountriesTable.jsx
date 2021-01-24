@@ -6,6 +6,14 @@ import Formatter from '../../../util/model/Formatter';
 
 const style = {};
 
+const ObjectNumber = ({ value, formatter }) => {
+  return (
+    <FlexBox>
+      <ObjectStatus state={formatter(value)}>{Formatter.localeNumber(value)}</ObjectStatus>
+    </FlexBox>
+  );
+};
+
 const Columns = () => {
   const { t } = useTranslation();
   return [
@@ -27,11 +35,7 @@ const Columns = () => {
       Header: t('casesColumnHeader'),
       accessor: 'cases',
       Cell: (cell) => {
-        return (
-          <FlexBox wrap={FlexBoxWrap} alignItems={FlexBoxAlignItems.End} justifyContent={FlexBoxJustifyContent.End}>
-            <ObjectStatus state={Formatter.covidCasesCountries(cell.value)}>{Formatter.localeNumber(cell.value)}</ObjectStatus>
-          </FlexBox>
-        );
+        return <ObjectNumber formatter={Formatter.covidCasesCountries} value={cell.value} />;
       },
     },
   ];

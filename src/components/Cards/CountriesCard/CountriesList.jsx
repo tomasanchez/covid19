@@ -1,4 +1,4 @@
-import { StandardListItem, List, FlexBox, Title, TitleLevel, ProgressIndicator, FlexBoxWrap, Label, FlexBoxDirection } from '@ui5/webcomponents-react';
+import { StandardListItem, List, FlexBox, Title, TitleLevel, ProgressIndicator, FlexBoxWrap, Label, FlexBoxDirection, ListSeparators } from '@ui5/webcomponents-react';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import Formatter from '../../../util/model/Formatter';
@@ -23,7 +23,7 @@ const CountriesList = ({ items }) => {
   }, [aCountries.length, items]);
 
   return (
-    <List style={style.list}>
+    <List style={style.list} separators={ListSeparators.Inner}>
       {aCountries.map((oCountry) => (
         <StandardListItem
           style={style.listItem}

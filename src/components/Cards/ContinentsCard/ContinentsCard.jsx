@@ -11,7 +11,7 @@ import Formatter from '../../../util/model/Formatter';
 const style = {
   continentsCard: {
     width: '400px',
-    height: '30rem',
+    height: '29.5rem',
     marginBottom: '1rem',
   },
 };

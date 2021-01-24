@@ -28,6 +28,7 @@ const ContinentsChart = ({ items, loading }) => {
       dataset={aContinents}
       dimension={{
         accessor: 'continent',
+        formatter: t,
       }}
       measure={{
         accessor: 'cases',
