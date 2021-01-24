@@ -52,5 +52,10 @@
   "loadingFlag": "country flag",
   "recoveredColumnHeader": "Recovered",
   "recoveredTooltip": "Zero means no data",
-  "deceasesColumnHeader": "Deceases"
+  "deceasesColumnHeader": "Deceases",
+  "continentsChartCardHeader": "Global situation",
+  "continentsChartCadSubHeader": "Per One Million",
+  "activeChartLabel": "Active",
+  "recoveredChartLabel": "Recovered",
+  "deathsChartLabel": "Deaths"
 }

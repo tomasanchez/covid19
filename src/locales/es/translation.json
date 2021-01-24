@@ -52,5 +52,10 @@
   "loadingFlag": "bandera",
   "recoveredColumnHeader": "Recuperados",
   "recoveredTooltip": "Cero significa sin datos",
-  "deceasesColumnHeader": "Fallecidos"
+  "deceasesColumnHeader": "Fallecidos",
+  "continentsChartCardHeader": "Situcacion Global",
+  "continentsChartCadSubHeader": "Por millon",
+  "activeChartLabel": "Activos",
+  "recoveredChartLabel": "Recuperados",
+  "deathsChartLabel": "Muertes"
 }

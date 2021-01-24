@@ -3,9 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Card } from '@ui5/webcomponents-react/lib/Card';
 import Request from '../../../util/api/engine/Request';
 import CountriesList from './CountriesList';
-import { FlexBox, FlexBoxAlignItems, FlexBoxDirection, FlexBoxJustifyContent, FlexBoxWrap, Icon } from '@ui5/webcomponents-react';
+import { Icon } from '@ui5/webcomponents-react/lib/Icon';
 import CountriesTable from './CountriesTable';
-import { isMobile, isDesktop } from '@ui5/webcomponents-base/dist/Device';
 
 const style = {
   countriesCard: {
@@ -36,14 +35,14 @@ const CountriesCard = () => {
   }, [aCountries.length]);
 
   return (
-    <FlexBox wrap={FlexBoxWrap.Wrap} direction={FlexBoxDirection.Column} justifyContent={FlexBoxJustifyContent.Center} alignItems={FlexBoxAlignItems.Center}>
+    <>
       <Card heading={t('countriesCardHeader')} style={style.countriesCard} avatar={<Icon name="list" />}>
         <CountriesList items={aTopCountries} />
       </Card>
       <Card heading={t('allCountriesCardHeader')} style={style.allCountriesCard} avatar={<Icon name="table-view" />}>
         <CountriesTable items={aCountries} />
       </Card>
-    </FlexBox>
+    </>
   );
 };
 

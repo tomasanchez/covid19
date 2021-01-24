@@ -7,6 +7,7 @@ import ContinentsChart from './ContinentsChart';
 import Request from '../../../util/api/engine/Request';
 import ContinentsKPIs from './ContinentsKPIs';
 import Formatter from '../../../util/model/Formatter';
+import ContinetsStatistics from './ContinetsStatistics';
 
 const style = {
   continentsCard: {
@@ -55,6 +56,9 @@ const ContinetsCard = () => {
         {bList ? <ContinetsList items={aContinents} loading={bLoading} /> : <ContinentsChart items={aContinents} loading={bLoading} />}
       </Card>
       <ContinentsKPIs items={aContinents} />
+      <Card heading={t('continentsChartCardHeader')} subheading={t('continentsChartCadSubHeader')} style={style.continentsCard} avatar={<Icon name="bar-chart" />}>
+        <ContinetsStatistics items={aContinents} />
+      </Card>
     </>
   );
 };
