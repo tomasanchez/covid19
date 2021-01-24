@@ -49,5 +49,8 @@
   "allCountriesCardHeader": "Situation by Country",
   "countryColumnHeader": "Country",
   "casesColumnHeader": "Cumulative Cases",
-  "loadingFlag": "country flag"
+  "loadingFlag": "country flag",
+  "recoveredColumnHeader": "Recovered",
+  "recoveredTooltip": "Zero means no data",
+  "deceasesColumnHeader": "Deceases"
 }

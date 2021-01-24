@@ -6,10 +6,12 @@ import Formatter from '../../../util/model/Formatter';
 
 const style = {};
 
-const ObjectNumber = ({ value, formatter }) => {
+const ObjectNumber = ({ value, formatter, ttip, fvalue }) => {
   return (
-    <FlexBox>
-      <ObjectStatus state={formatter(value)}>{Formatter.localeNumber(value)}</ObjectStatus>
+    <FlexBox alignItems={FlexBoxAlignItems.Center} wrap={FlexBoxWrap} style={spacing.sapUiContentPadding}>
+      <ObjectStatus state={formatter ? (fvalue ? formatter(fvalue) : formatter(value)) : 'None'} tooltip={!value ? ttip : ''}>
+        {Formatter.localeNumber(value)}
+      </ObjectStatus>
     </FlexBox>
   );
 };
@@ -38,13 +40,27 @@ const Columns = () => {
         return <ObjectNumber formatter={Formatter.covidCasesCountries} value={cell.value} />;
       },
     },
+    {
+      Header: t('recoveredColumnHeader'),
+      accessor: 'recovered',
+      Cell: (cell) => {
+        return <ObjectNumber formatter={Formatter.covidRecovered} fvalue={(cell.value * 100) / cell.cell.row.original.cases} value={cell.value} ttip={t('recoveredTooltip')} />;
+      },
+    },
+    {
+      Header: t('deceasesColumnHeader'),
+      accessor: 'deaths',
+      Cell: (cell) => {
+        return <ObjectNumber value={cell.value} />;
+      },
+    },
   ];
 };
 
 const CountriesTable = ({ items }) => {
   return (
-    <FlexBox fitContainer={true}>
-      <AnalyticalTable data={items} columns={Columns()} scaleWidthMode="Smart"></AnalyticalTable>
+    <FlexBox fitContainer={true} wrap={FlexBoxWrap} visibleRows={7}>
+      <AnalyticalTable data={items} columns={Columns()} scaleWidthMode="Smart" />
     </FlexBox>
   );
 };

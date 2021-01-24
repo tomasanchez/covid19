@@ -5,16 +5,17 @@ import Request from '../../../util/api/engine/Request';
 import CountriesList from './CountriesList';
 import { FlexBox, FlexBoxAlignItems, FlexBoxDirection, FlexBoxJustifyContent, FlexBoxWrap, Icon } from '@ui5/webcomponents-react';
 import CountriesTable from './CountriesTable';
+import { isMobile, isDesktop } from '@ui5/webcomponents-base/dist/Device';
 
 const style = {
   countriesCard: {
-    width: '400px',
+    width: window.innerWidth >= 768 ? '27vw' : '400px',
     height: '25.15rem',
     marginBottom: '1rem',
   },
 
   allCountriesCard: {
-    width: '600px',
+    width: window.innerWidth >= 768 ? '40vw' : '100vw',
     height: '27.35rem',
   },
 };

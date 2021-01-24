@@ -49,5 +49,8 @@
   "allCountriesCardHeader": "Situacion por Pais",
   "countryColumnHeader": "Pais",
   "casesColumnHeader": "Casos acumulativos",
-  "loadingFlag": "bandera"
+  "loadingFlag": "bandera",
+  "recoveredColumnHeader": "Recuperados",
+  "recoveredTooltip": "Cero significa sin datos",
+  "deceasesColumnHeader": "Fallecidos"
 }
