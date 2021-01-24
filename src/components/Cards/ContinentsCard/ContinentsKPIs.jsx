@@ -1,12 +1,13 @@
 import { AnalyticalCard, AnalyticalCardHeader, FlexBox, FlexBoxDirection, ValueState } from '@ui5/webcomponents-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next/';
+import Formatter from '../../../util/model/Formatter';
 
 const style = {
   KPIstyles: {
     height: '6.5rem',
     width: '15rem',
-    'margin-bottom': '1rem',
+    marginBottom: '1rem',
   },
 };
 
@@ -23,7 +24,7 @@ const KPI = ({ title, value, unit, valueState, arrow, subtitle }) => {
           indicatorState={valueState ? valueState : ValueState.None}
           title={t(title)}
           unit={t(unit)}
-          value={value}
+          value={Formatter.localeNumber(value)}
           valueState={valueState ? valueState : ValueState.None}
         />
       }

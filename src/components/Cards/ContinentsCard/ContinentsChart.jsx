@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart } from '@ui5/webcomponents-react-charts';
 import { useTranslation } from 'react-i18next';
+import Formatter from '../../../util/model/Formatter';
 
 const ContinentsChart = ({ items, loading }) => {
   const [aContinents, setEntitySet] = useState([]);
@@ -30,6 +31,7 @@ const ContinentsChart = ({ items, loading }) => {
       }}
       measure={{
         accessor: 'cases',
+        formatter: Formatter.localeNumber,
       }}
       style={{
         width: '100%',

@@ -18,7 +18,7 @@ const Formatter = {
     if (iCases >= 5000000) {
       sValueState = ValueState.Warning;
       if (iCases >= 10500000) sValueState = ValueState.Error;
-    } else if (iCases >= 2500000) sValueState = ValueState.Information;
+    } else if (iCases >= 1000000) sValueState = ValueState.Information;
     else if (iCases <= 500000) sValueState = ValueState.Success;
 
     return sValueState;
@@ -36,6 +36,10 @@ const Formatter = {
     } else if (iCases <= 45) sValueState = ValueState.Error;
 
     return sValueState;
+  },
+
+  localeNumber: (number) => {
+    return Intl.NumberFormat().format(number);
   },
 };
 

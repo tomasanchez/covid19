@@ -36,7 +36,7 @@ const ContinentsList = ({ items, loading }) => {
           datatype={oContinent}
           description={t('description.population') + oContinent.population}
           style={style.continentItem}
-          info={oContinent.todayCases}
+          info={Formatter.localeNumber(oContinent.todayCases)}
           infoState={Formatter.covidCasesContinent(oContinent.todayCases)}
           selected="false"
           data-id={oContinent.continent}

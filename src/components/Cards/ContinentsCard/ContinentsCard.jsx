@@ -6,12 +6,13 @@ import ContinetsList from './ContinentsList';
 import ContinentsChart from './ContinentsChart';
 import Request from '../../../util/api/engine/Request';
 import ContinentsKPIs from './ContinentsKPIs';
+import Formatter from '../../../util/model/Formatter';
 
 const style = {
   continentsCard: {
     width: '400px',
     height: '30rem',
-    'margin-bottom': '1rem',
+    marginBottom: '1rem',
   },
 };
 
@@ -34,6 +35,7 @@ const ContinetsCard = () => {
   useEffect(() => {
     if (aContinents.length === 0) {
       Request.read('ContinentsSet').then((oResponse) => {
+        oResponse.data.forEach((oContinent) => (oContinent.population = Formatter.localeNumber(oContinent.population)));
         setEntitySet(oResponse.data);
       });
     }

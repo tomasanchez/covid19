@@ -25,10 +25,15 @@ const CountriesList = ({ items }) => {
   return (
     <List style={style.list}>
       {aCountries.map((oCountry) => (
-        <StandardListItem style={style.listItem} key={oCountry.countryInfo.iso2} info={oCountry.cases} infoState={Formatter.covidCasesCountries(oCountry.cases)} image={oCountry.countryInfo.flag}>
+        <StandardListItem
+          style={style.listItem}
+          key={oCountry.countryInfo.iso2}
+          info={Formatter.localeNumber(oCountry.cases)}
+          infoState={Formatter.covidCasesCountries(oCountry.cases)}
+          image={oCountry.countryInfo.flag}
+        >
           <FlexBox wrap={FlexBoxWrap} direction={FlexBoxDirection.Column}>
             <Title level={TitleLevel.H4}>{oCountry.country}</Title>
-
             <ProgressIndicator value={(oCountry.recovered / oCountry.cases) * 100} valueState={Formatter.covidRecovered((oCountry.recovered / oCountry.cases) * 100)} />
             <Label>{t('listRecoveredLabel')}</Label>
           </FlexBox>

@@ -44,5 +44,8 @@
   "deathsKPITTitle": "Deceases",
   "deathsKPIUnit": "Deaths",
   "criticalKPITitle": "Critical Cases",
-  "criticalKPISubtitle": "Per one million"
+  "criticalKPISubtitle": "Per one million",
+  "allCountriesCardHeader": "Situation by Country",
+  "countryColumnHeader": "Country",
+  "casesColumnHeader": "Cumulative Cases"
 }
