@@ -34,8 +34,6 @@ const KPI = ({ title, value, unit, valueState, arrow, subtitle }) => {
 };
 
 const ContinentsKPIs = ({ items }) => {
-  const { t } = useTranslation();
-
   const iCases = items ? items.reduce((acc, oItem) => acc + oItem.todayCases, 0) : 0;
   const iRecovered = items ? items.reduce((acc, oItem) => acc + oItem.todayRecovered, 0) : 0;
   const iDeaths = items ? items.reduce((acc, oItem) => acc + oItem.todayDeaths, 0) : 0;

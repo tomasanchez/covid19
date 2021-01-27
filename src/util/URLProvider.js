@@ -1,6 +1,5 @@
 export const getUrl = (urls, key, replaceOptions) => {
   let url = urls[key];
-
   if (!url) {
     throw new Error('Url defined: ' + key + ' not found');
   }

@@ -4,6 +4,7 @@
   "helmet.title.error": "Buggy Component - Covid-19 Pandemic Dashboard",
   "helmet.title.notfound": "NotFound - Covid-19 Pandemic Dashboard",
   "helmet.title.dashboard.overview": "Covid-19 Pandemic - Overview",
+  "helmet.title.details": "Pandemic Details - ",
   "shell.title": "Pandemic Dashboard",
   "shell.logo.alt": "SARS COVID-19",
   "logo.tooltip": "CoV-19",

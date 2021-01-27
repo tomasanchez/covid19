@@ -10,6 +10,7 @@ const TodoEdit = lazy(() => import('../pages/Todo/Edit/TodoEdit'));
 const NotFound = lazy(() => import('../pages/Fallback/NotFound'));
 const Buggy = lazy(() => import('../pages/Fallback/Buggy'));
 const Dashboard = lazy(() => import('../pages/Overview/Dashboard/Dashboard'));
+const Details = lazy(() => import('../pages/Overview/Details/Details'));
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
         <RouteWithAuthorizationRestriction allowedAuthorities={['canAccessTodoEditPage']} authorityKey="permissions" path={getUrl('TODO_EDIT')} component={TodoEdit} />
         <Route path={getUrl('BUGGY')} exact component={Buggy} />
         <Route path={getUrl('OVERVIEW')} exact component={Dashboard} />
+        <Route path={getUrl('DETAILS')} exact component={Details} />
         <Route path={getUrl('NOT_FOUND')} exact component={NotFound} />
         <Route path={getUrl('ANY')} component={NotFound} />
       </Switch>

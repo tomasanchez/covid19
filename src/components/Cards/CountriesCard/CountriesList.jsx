@@ -2,6 +2,8 @@ import { StandardListItem, List, FlexBox, Title, TitleLevel, ProgressIndicator, 
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import Formatter from '../../../util/model/Formatter';
+import { useHistory } from 'react-router-dom';
+import { getUrl } from '../../../util/browser/BrowserProvider';
 
 const style = {
   listItem: {
@@ -11,6 +13,8 @@ const style = {
 };
 
 const CountriesList = ({ items }) => {
+  const history = useHistory();
+
   const { t } = useTranslation();
 
   const [aCountries, setEntitySet] = useState([]);
@@ -22,8 +26,12 @@ const CountriesList = ({ items }) => {
     }
   }, [aCountries.length, items]);
 
+  const onNavTo = (oEvent) => {
+    history.push(getUrl('DETAILS', [{ value: oEvent.detail.item.dataset.id }]));
+  };
+
   return (
-    <List style={style.list} separators={ListSeparators.Inner}>
+    <List style={style.list} separators={ListSeparators.Inner} onItemClick={onNavTo}>
       {aCountries.map((oCountry) => (
         <StandardListItem
           style={style.listItem}
@@ -31,6 +39,7 @@ const CountriesList = ({ items }) => {
           info={Formatter.localeNumber(oCountry.cases)}
           infoState={Formatter.covidCasesCountries(oCountry.cases)}
           image={oCountry.countryInfo.flag}
+          data-id={oCountry.country}
         >
           <FlexBox wrap={FlexBoxWrap} direction={FlexBoxDirection.Column}>
             <Title level={TitleLevel.H4}>{oCountry.country}</Title>

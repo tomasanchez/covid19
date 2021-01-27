@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ColumnChart, PieChart } from '@ui5/webcomponents-react-charts';
+import { ColumnChart } from '@ui5/webcomponents-react-charts';
 import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
 

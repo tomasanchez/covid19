@@ -1,10 +1,8 @@
 import React from 'react';
 import { spacing } from '@ui5/webcomponents-react-base';
-import { AnalyticalTable, FlexBox, FlexBoxAlignItems, FlexBoxJustifyContent, FlexBoxWrap, ObjectStatus, Text, Title, TitleLevel } from '@ui5/webcomponents-react';
+import { AnalyticalTable, FlexBox, FlexBoxAlignItems, FlexBoxWrap, ObjectStatus, Title, TitleLevel } from '@ui5/webcomponents-react';
 import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
-
-const style = {};
 
 const ObjectNumber = ({ value, formatter, ttip, fvalue }) => {
   return (
