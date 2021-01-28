@@ -58,5 +58,7 @@
   "continentsChartCadSubHeader": "Per One Million",
   "activeChartLabel": "Active",
   "recoveredChartLabel": "Recovered",
-  "deathsChartLabel": "Deaths"
+  "deathsChartLabel": "Deaths",
+  "homeBreadCrum": "Overview",
+  "updatedObjectLabel": "Last update"
 }

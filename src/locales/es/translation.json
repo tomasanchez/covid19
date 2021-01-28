@@ -58,5 +58,7 @@
   "continentsChartCadSubHeader": "Por millon",
   "activeChartLabel": "Activos",
   "recoveredChartLabel": "Recuperados",
-  "deathsChartLabel": "Muertes"
+  "deathsChartLabel": "Muertes",
+  "homeBreadCrum": "Inicio",
+  "updatedObjectLabel": "Ultima actualizacion"
 }

@@ -10,6 +10,7 @@ import { useHistory } from 'react-router-dom';
 import Request from '../../../util/api/engine/Request';
 import isCountry from '../../../util/api/engine/CountryValidator';
 import { getUrl } from '../../../util/browser/BrowserProvider';
+import ObjectHeader from '../../../components/ObjectHeader/ObjectHeader';
 
 /**
  * Breadcrumbs functional component method.
@@ -34,7 +35,7 @@ const PageBreadcrumbs = ({ sCountry, sHome }) => {
 };
 
 /**
- *
+ * Country object page
  * @public
  * @component
  * @param {props} match.params.id the supposed country name
@@ -67,7 +68,13 @@ const Details = ({ match }) => {
     <>
       <Helmet title={sTile} />
       {oCountry && (
-        <ObjectPage breadcrumbs={<PageBreadcrumbs sCountry={oCountry.country} sHome={t('homeBreadCrum')} />} image={oCountry.countryInfo.flag} title={oCountry.country} subTitle={sContinent}>
+        <ObjectPage
+          breadcrumbs={<PageBreadcrumbs sCountry={oCountry.country} sHome={t('homeBreadCrum')} />}
+          image={oCountry.countryInfo.flag}
+          headerContent={<ObjectHeader data={oCountry} />}
+          title={oCountry.country}
+          subTitle={t(sContinent)}
+        >
           <ObjectPageSection aria-label="Goals" id="goals" title="Goals"></ObjectPageSection>
         </ObjectPage>
       )}
