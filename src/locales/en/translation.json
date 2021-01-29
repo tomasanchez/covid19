@@ -60,5 +60,11 @@
   "recoveredChartLabel": "Recovered",
   "deathsChartLabel": "Deaths",
   "homeBreadCrum": "Overview",
-  "updatedObjectLabel": "Last update"
+  "updatedObjectLabel": "Last update",
+  "countryData": "Country Information",
+  "activeCases": "Active Cases",
+  "populationLabel": "Population",
+  "criticalCases": "Critical Cases",
+  "testLabel": "Tests",
+  "historicalCases": "Historical Cases"
 }

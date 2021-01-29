@@ -1,5 +1,5 @@
 /* eslint-disable no-loop-func */
-import { ObjectPageSection } from '@ui5/webcomponents-react';
+import { ObjectPageSection } from '@ui5/webcomponents-react/lib/ObjectPageSection';
 import { Breadcrumbs } from '@ui5/webcomponents-react/lib/Breadcrumbs';
 import { Link } from '@ui5/webcomponents-react/lib/Link';
 import { ObjectPage } from '@ui5/webcomponents-react/lib/ObjectPage';
@@ -11,6 +11,8 @@ import Request from '../../../util/api/engine/Request';
 import isCountry from '../../../util/api/engine/CountryValidator';
 import { getUrl } from '../../../util/browser/BrowserProvider';
 import ObjectHeader from '../../../components/ObjectHeader/ObjectHeader';
+import CasesSection from '../../../components/Sections/CasesSection';
+import DataSection from '../../../components/Sections/DataSection';
 
 /**
  * Breadcrumbs functional component method.
@@ -74,8 +76,15 @@ const Details = ({ match }) => {
           headerContent={<ObjectHeader data={oCountry} />}
           title={oCountry.country}
           subTitle={t(sContinent)}
+          selectedSectionId="dataSection"
         >
-          <ObjectPageSection aria-label="Goals" id="goals" title="Goals"></ObjectPageSection>
+          <ObjectPageSection aria-label={t('countryData')} id="dataSection" title={t('countryData')}>
+            <DataSection data={oCountry} />
+          </ObjectPageSection>
+
+          <ObjectPageSection aria-label={t('historicalCases')} id="historicalCases" title={t('historicalCases')}>
+            <CasesSection />
+          </ObjectPageSection>
         </ObjectPage>
       )}
     </>
