@@ -66,5 +66,17 @@
   "populationLabel": "Population",
   "criticalCases": "Critical Cases",
   "testLabel": "Tests",
-  "historicalCases": "Historical Cases"
+  "historicalCases": "Historical Cases",
+  "casesAnalyticalTitle": "CoV-19 Confirmed Cases",
+  "casesAnalyticalSubTitle": "Cases per Month",
+  "casesAnalyticalUnit": "cases",
+  "historicalDeceases": "Historical Deceases",
+  "deceasesAnalyticalTitle": "Deceases",
+  "deceasesAnalyticalSubTitle": "Deceases per Month",
+  "deceasesAnalyticalUnit": "deaths",
+  "historicalRecovered": "Historical Recovered",
+  "recoveredAnalyticalTitle": "Recovered",
+  "recoveredAnalyticalSubTitle": "Recovers per Month",
+  "recoveredAnalyticalUnit": "recovers",
+  "analyticalDescription": "This day"
 }

@@ -11,8 +11,9 @@ import Request from '../../../util/api/engine/Request';
 import isCountry from '../../../util/api/engine/CountryValidator';
 import { getUrl } from '../../../util/browser/BrowserProvider';
 import ObjectHeader from '../../../components/ObjectHeader/ObjectHeader';
-import CasesSection from '../../../components/Sections/CasesSection';
+import AnalyticalSection from '../../../components/Sections/AnalyticalSections/AnalyticalSection';
 import DataSection from '../../../components/Sections/DataSection';
+import createHistoricalData from '../../../util/api/engine/TimeLineHandler';
 
 /**
  * Breadcrumbs functional component method.
@@ -46,6 +47,7 @@ const PageBreadcrumbs = ({ sCountry, sHome }) => {
 const Details = ({ match }) => {
   const { t } = useTranslation();
   const [oCountry, setEntity] = useState(undefined);
+  const [oHistorical, setHistorical] = useState(undefined);
   const sObjectId = match.params.id;
   const sContinent = isCountry(sObjectId);
 
@@ -60,6 +62,11 @@ const Details = ({ match }) => {
       var sPath = Request.createKey('CountriesSet', sObjectId);
       Request.readSingle(sPath).then((oResponse) => {
         setEntity(oResponse.data);
+      });
+
+      var sHistoricalPath = Request.createKey('HistoricalSet', sObjectId, 'lastDays');
+      Request.readSingle(sHistoricalPath).then((oResponse) => {
+        createHistoricalData(oResponse.data).then((oHistoricalData) => setHistorical(oHistoricalData));
       });
     }
   }, [oCountry, sObjectId]);
@@ -83,7 +90,15 @@ const Details = ({ match }) => {
           </ObjectPageSection>
 
           <ObjectPageSection aria-label={t('historicalCases')} id="historicalCases" title={t('historicalCases')}>
-            <CasesSection />
+            <AnalyticalSection name="cases" data={oCountry.todayCases} analyticalData={oHistorical && oHistorical.cases} />
+          </ObjectPageSection>
+
+          <ObjectPageSection aria-label={t('historicalRecovered')} id="historicalRecovered" title={t('historicalRecovered')}>
+            <AnalyticalSection name="recovered" data={oCountry.todayRecovered} analyticalData={oHistorical && oHistorical.recovered} />
+          </ObjectPageSection>
+
+          <ObjectPageSection aria-label={t('historicalDeceases')} id="historicalDeceases" title={t('historicalDeceases')}>
+            <AnalyticalSection name="deceases" data={oCountry.todayDeaths} analyticalData={oHistorical && oHistorical.deaths} />
           </ObjectPageSection>
         </ObjectPage>
       )}
