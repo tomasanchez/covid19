@@ -1,16 +1,32 @@
 /* eslint-disable no-loop-func */
 const aMonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+/**
+ * Filter function to get all dates in a month
+ * @private
+ * @function
+ * @param {string} sDate the formatted date dd/mm/yy
+ * @param {int} iMonth the current itereated month number
+ * @param {int} iYear the current iterated year
+ * @return {boolean} if date is in the current iteration or not
+ */
 const isInCurrentMoth = (sDate, iMonth, iYear) => {
   return getMonth(sDate) === iMonth && sDate.endsWith(iYear.toString());
 };
 
+/**
+ * Gets the month of a date with format dd/mm/yy
+ * @private
+ * @function
+ * @param {string} sDate the formatted date dd/mm/yy
+ * @return {int} month number
+ */
 const getMonth = (sDate) => {
   return parseInt(sDate.substr(sDate, sDate.indexOf('/')), 10);
 };
 
 /**
- * Timeline generator
+ * Parses the timeline JSON to an array per month
  * @private
  * @function
  * @param {array} aDates the array with all dates
@@ -52,8 +68,15 @@ const createTimeline = (aDates, oMeasure, lastMonth) => {
   return aTimeLine;
 };
 
+/**
+ * Simplifies the historical data
+ * @public
+ * @function
+ * @param {object} oHistorical the historical data json
+ * @return {object} A new historical data object { cases: [], deaths: [], recovered: []}
+ */
 const createHistoricalData = async (oHistorical) => {
-  var oHistoricalData = {};
+  var oHistoricalData = { cases: [], deaths: [], recovered: [] };
 
   var aMeasures = ['cases', 'deaths', 'recovered'];
 
@@ -61,7 +84,7 @@ const createHistoricalData = async (oHistorical) => {
     var aDates = Object.getOwnPropertyNames(oHistorical.timeline[sMeasure]),
       iLastMonth = getMonth(aDates[aDates.length - 1]);
 
-    var aTimeLine = createTimeline(aDates, oHistorical.timeline[sMeasure], iLastMonth);
+    oHistoricalData[sMeasure] = createTimeline(aDates, oHistorical.timeline[sMeasure], iLastMonth);
   });
 
   return oHistoricalData;
