@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next';
-
 /* eslint-disable no-loop-func */
 const aMonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 

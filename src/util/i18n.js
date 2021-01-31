@@ -4,7 +4,6 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationEN from '../locales/en/translation.json';
-import translationPT from '../locales/pt/translation.json';
 import translationES from '../locales/es/translation.json';
 
 const SUPPORTED_LANGUAGES = {
@@ -12,11 +11,6 @@ const SUPPORTED_LANGUAGES = {
     translation: translationEN,
     code: 'en-US',
     textKey: 'shell.button.user.settings.item.languageSwitch.en',
-  },
-  pt: {
-    translation: translationPT,
-    code: 'pt',
-    textKey: 'shell.button.user.settings.item.languageSwitch.pt',
   },
   es: {
     translation: translationES,
