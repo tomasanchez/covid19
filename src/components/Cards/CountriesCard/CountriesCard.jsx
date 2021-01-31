@@ -6,6 +6,11 @@ import CountriesList from './CountriesList';
 import { Icon } from '@ui5/webcomponents-react/lib/Icon';
 import CountriesTable from './CountriesTable';
 
+/**
+ * Inline style object
+ * @private
+ * @object
+ */
 const style = {
   countriesCard: {
     width: window.innerWidth >= 768 ? '27vw' : '400px',
@@ -19,6 +24,12 @@ const style = {
   },
 };
 
+/**
+ * Code-split of countries card
+ * @public
+ * @component
+ * @returns {HTMLElement} two ui5.react.Card
+ */
 const CountriesCard = () => {
   const { t } = useTranslation();
   const [aCountries, setEntitySet] = useState([]);

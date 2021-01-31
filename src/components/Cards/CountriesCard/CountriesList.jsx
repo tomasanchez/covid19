@@ -5,6 +5,11 @@ import Formatter from '../../../util/model/Formatter';
 import { useHistory } from 'react-router-dom';
 import { getUrl } from '../../../util/browser/BrowserProvider';
 
+/**
+ * Inline style object
+ * @private
+ * @object
+ */
 const style = {
   listItem: {
     height: '4rem',
@@ -12,6 +17,13 @@ const style = {
   list: { height: '20rem' },
 };
 
+/**
+ * Code-split of card list
+ * @public
+ * @component
+ * @param {array} items the data array
+ * @returns {ui5.webcomponents.react.List} a List of continents
+ */
 const CountriesList = ({ items }) => {
   const history = useHistory();
 

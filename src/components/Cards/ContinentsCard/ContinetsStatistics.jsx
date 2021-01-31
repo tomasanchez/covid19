@@ -7,6 +7,7 @@ import Formatter from '../../../util/model/Formatter';
  * Code-split of continets column chart
  * @public
  * @component
+ * @param {array} items the data array
  * @returns {ui5.webcomponents.react.charts.ColumnChart} a ColumnChart of continents data
  */
 const ContinetsStatistics = ({ items }) => {

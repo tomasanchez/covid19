@@ -29,6 +29,8 @@ const style = {
  * Code-split of card list
  * @public
  * @component
+ * @param {array} items the data array
+ * @param {boolean} loading the loading state
  * @returns {ui5.webcomponents.react.List} a List of continents
  */
 const ContinentsList = ({ items, loading }) => {
