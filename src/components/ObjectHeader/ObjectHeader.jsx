@@ -56,7 +56,9 @@ const ObjectHeader = ({ data }) => {
       </FlexBox>
       <FlexBox direction="Column">
         <Label>{t('updatedObjectLabel')}</Label>
-        <Badge colorScheme={9}>{dLastUpdate}</Badge>
+        <Badge icon={<Icon name="date-time" />} colorScheme={9}>
+          {dLastUpdate}
+        </Badge>
       </FlexBox>
     </>
   );
