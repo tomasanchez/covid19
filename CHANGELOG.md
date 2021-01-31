@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/tomasanchez/covid19/compare/v0.1.2...v0.1.3) (2021-01-31)
+
+
+### Features
+
+* add historical charts ([351ef7c](https://github.com/tomasanchez/covid19/commit/351ef7c86c71550281180091dc708da3bb937630))
+* add last update date ([cfdad65](https://github.com/tomasanchez/covid19/commit/cfdad658bf3881f8741cf78c471411f6a4f10c81))
+* add months translations ([55d39a8](https://github.com/tomasanchez/covid19/commit/55d39a83001498a2959b174f478ae9a309c8a958))
+* add table navigation ([0e04f5d](https://github.com/tomasanchez/covid19/commit/0e04f5dee494242aca3dfe3a489694f8cb764b27))
+* **lang:** add spanish translation ([9e765e6](https://github.com/tomasanchez/covid19/commit/9e765e6b0ed7bde6f326b8993636e1aa83342d7a))
+
+
+### Bug Fixes
+
+* correct color in charts ([e954a5b](https://github.com/tomasanchez/covid19/commit/e954a5bc51dbb5ac2779a10f3c0a0766306a105b))
+* correct timeline parsing ([45a99db](https://github.com/tomasanchez/covid19/commit/45a99db162bd8cb6fbd9151390b55b1ae7fd4c4d))
+* historical data object ([dfc2aba](https://github.com/tomasanchez/covid19/commit/dfc2aba94f34060335d0151922455a8e3998ae55))
+* width change ([425e781](https://github.com/tomasanchez/covid19/commit/425e781b23d0c90ee256203eb2b5ba233e23ec58))
+
 ### [0.1.2](https://github.com/tomasanchez/covid19/compare/v0.1.1...v0.1.2) (2021-01-28)
 
 
