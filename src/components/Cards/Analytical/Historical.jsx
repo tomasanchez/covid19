@@ -68,13 +68,19 @@ const Header = ({ data, name }) => {
 const DataChart = ({ analyticalData, name }) => {
   const sColor = name === 'cases' ? 'var(--sapCriticalTextColor)' : name === 'recovered' ? 'var(--sapPositiveTextColor)' : 'var(--sapNegativeTextColor)';
 
+  const { t } = useTranslation();
+
+  const translateMotnh = (sMonth) => {
+    return t(sMonth.substr(0, sMonth.indexOf(' ')));
+  };
+
   return (
     <>
       {analyticalData ? (
         <LineChart
           dataset={analyticalData}
-          dimensions={[{ accessor: 'month', interval: isMobile() ? 4 : 1 }]}
-          measures={[{ accessor: 'value', formatter: Formatter.localeNumber, hideDataLabel: isMobile(), color: sColor }]}
+          dimensions={[{ accessor: 'month', interval: isMobile() ? 4 : 1, formatter: translateMotnh }]}
+          measures={[{ accessor: 'Value', formatter: Formatter.localeNumber, hideDataLabel: isMobile(), color: sColor }]}
           noLegend
         />
       ) : (
