@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 /* eslint-disable no-loop-func */
 const aMonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -51,12 +53,14 @@ const createTimeline = (aDates, oMeasure, lastMonth) => {
     var aMeasures = aDays.map((sDay) => oMeasure[sDay]);
 
     // total measures from the month
-    var iMeasure = aMeasures.reduce((totalMeasures, measures) => {
+    var iMeasure = aMeasures[aMeasures.length - 1];
+
+    /*  aMeasures.reduce((totalMeasures, measures) => {
       return totalMeasures + measures;
-    }, 0);
+    }, 0); */
 
     // adding to timeline
-    aTimeLine.push({ month: aMonthNames[month - 1], measure: iMeasure, year: year });
+    aTimeLine.push({ month: `${aMonthNames[month - 1]} ${year}`, Value: iMeasure, year: 2000 + year });
 
     // updating year
     if (month === 12) {
