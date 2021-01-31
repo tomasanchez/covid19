@@ -1,9 +1,27 @@
 import React from 'react';
 import { spacing } from '@ui5/webcomponents-react-base';
-import { AnalyticalTable, FlexBox, FlexBoxAlignItems, FlexBoxWrap, ObjectStatus, Title, TitleLevel } from '@ui5/webcomponents-react';
+import { AnalyticalTable } from '@ui5/webcomponents-react/lib/AnalyticalTable';
+import { FlexBox } from '@ui5/webcomponents-react/lib/FlexBox';
+import { FlexBoxAlignItems } from '@ui5/webcomponents-react/lib/FlexBoxAlignItems';
+import { FlexBoxWrap } from '@ui5/webcomponents-react/lib/FlexBoxWrap';
+import { ObjectStatus } from '@ui5/webcomponents-react/lib/ObjectStatus';
+import { Title } from '@ui5/webcomponents-react/lib/Title';
+import { TitleLevel } from '@ui5/webcomponents-react/lib/TitleLevel';
 import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
+import { useHistory } from 'react-router-dom';
+import { getUrl } from '../../../util/browser/BrowserProvider';
 
+/**
+ * Custom object status to display formatted numbers with semantic colors
+ * @public
+ * @component
+ * @param {number} value the displayed value
+ * @param {function} formatter the formatting function
+ * @param {string} ttip the tootlip to be displayed
+ * @param {number} fvalue the formatting value
+ * @returns {ui5.webcomponents.react.FlexBox} a custom object status JSX element
+ */
 const ObjectNumber = ({ value, formatter, ttip, fvalue }) => {
   return (
     <FlexBox alignItems={FlexBoxAlignItems.Center} wrap={FlexBoxWrap} style={spacing.sapUiContentPadding}>
@@ -14,6 +32,12 @@ const ObjectNumber = ({ value, formatter, ttip, fvalue }) => {
   );
 };
 
+/**
+ * Creates columns configuration for table
+ * @public
+ * @function
+ * @returns {array} an array of Column properties
+ */
 const Columns = () => {
   const { t } = useTranslation();
   return [
@@ -55,10 +79,23 @@ const Columns = () => {
   ];
 };
 
+/**
+ * Code-split of countries table
+ * @public
+ * @component
+ * @param {array} items the data array
+ * @returns {ui5.webcomponents.react.FlexBox} an Analytical Tablel inside a FlexBox container
+ */
 const CountriesTable = ({ items }) => {
+  const history = useHistory();
+
+  const onNavTo = (oEvent) => {
+    history.push(getUrl('DETAILS', [{ value: oEvent.detail.row.original.country }]));
+  };
+
   return (
-    <FlexBox fitContainer={true} wrap={FlexBoxWrap} visibleRows={7}>
-      <AnalyticalTable data={items} columns={Columns()} scaleWidthMode="Smart" />
+    <FlexBox fitContainer={true} wrap={FlexBoxWrap}>
+      <AnalyticalTable onRowClick={onNavTo} data={items} columns={Columns()} visibleRows={7} scaleWidthMode="Smart" />
     </FlexBox>
   );
 };
