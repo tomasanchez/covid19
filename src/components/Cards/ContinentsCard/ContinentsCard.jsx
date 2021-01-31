@@ -9,6 +9,11 @@ import ContinentsKPIs from './ContinentsKPIs';
 import Formatter from '../../../util/model/Formatter';
 import ContinetsStatistics from './ContinetsStatistics';
 
+/**
+ * Inline style object
+ * @private
+ * @object
+ */
 const style = {
   continentsCard: {
     width: '400px',
@@ -17,6 +22,12 @@ const style = {
   },
 };
 
+/**
+ * Code-split of continents section
+ * @public
+ * @component
+ * @returns {HTMLElement} two ui5.react.Card
+ */
 const ContinetsCard = () => {
   const { t } = useTranslation();
 

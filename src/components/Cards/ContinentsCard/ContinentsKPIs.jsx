@@ -1,5 +1,9 @@
-import { AnalyticalCard, AnalyticalCardHeader, FlexBox, FlexBoxDirection, ValueState } from '@ui5/webcomponents-react';
 import React from 'react';
+import { ValueState } from '@ui5/webcomponents-react/lib/ValueState';
+import { AnalyticalCard } from '@ui5/webcomponents-react/lib/AnalyticalCard';
+import { AnalyticalCardHeader } from '@ui5/webcomponents-react/lib/AnalyticalCardHeader';
+import { FlexBox } from '@ui5/webcomponents-react/lib/FlexBox';
+import { FlexBoxDirection } from '@ui5/webcomponents-react/lib/FlexBoxDirection';
 import { useTranslation } from 'react-i18next/';
 import Formatter from '../../../util/model/Formatter';
 

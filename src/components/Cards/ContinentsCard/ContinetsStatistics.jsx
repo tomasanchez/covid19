@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { ColumnChart } from '@ui5/webcomponents-react-charts';
+import { ColumnChart } from '@ui5/webcomponents-react-charts/lib/ColumnChart';
 import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
 
+/**
+ * Code-split of continets column chart
+ * @public
+ * @component
+ * @returns {ui5.webcomponents.react.charts.ColumnChart} a ColumnChart of continents data
+ */
 const ContinetsStatistics = ({ items }) => {
   const [aContinents, setEntitySet] = useState([]);
 

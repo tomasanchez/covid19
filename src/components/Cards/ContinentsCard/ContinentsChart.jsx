@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { PieChart } from '@ui5/webcomponents-react-charts';
+import { PieChart } from '@ui5/webcomponents-react-charts/lib/PieChart';
 import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
 
+/**
+ * Continets cases display as Pie Chart
+ * @public
+ * @component
+ * @param {array} items the data array
+ * @param {boolean} loading the loading state
+ * @returns {ui5.webcomponents.react.charts.PieChart} a Pie Chart
+ */
 const ContinentsChart = ({ items, loading }) => {
   const [aContinents, setEntitySet] = useState([]);
 
