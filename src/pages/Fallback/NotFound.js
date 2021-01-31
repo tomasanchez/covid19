@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
-import notfound from '../../assets/notfound.png';
+import notfound from '../../assets/notfound2.png';
 import Fallback from './Fallback';
 
 const NotFound = () => {

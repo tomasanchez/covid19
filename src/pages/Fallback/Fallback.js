@@ -16,7 +16,9 @@ const style = {
     width: '100%',
   },
   image: {
-    width: '30%',
+    width: '50%',
+    heigth: '80%',
+    marginTop: '15vh',
   },
   reloadButton: {
     cursor: 'pointer',
