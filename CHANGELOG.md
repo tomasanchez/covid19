@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/tomasanchez/covid19/compare/v0.1.3...v0.1.4) (2021-02-02)
+
+
+### Bug Fixes
+
+* add chart missing-translations ([b908b15](https://github.com/tomasanchez/covid19/commit/b908b15a718cc88863aab9a4a3faa1cced0b8085))
+* table headers now display correctly ([b156f57](https://github.com/tomasanchez/covid19/commit/b156f57857a9f9e8cc29208c1196cb551ae68fab))
+
 ### [0.1.3](https://github.com/tomasanchez/covid19/compare/v0.1.2...v0.1.3) (2021-01-31)
 
 
