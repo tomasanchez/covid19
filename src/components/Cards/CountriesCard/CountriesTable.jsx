@@ -11,6 +11,8 @@ import { useTranslation } from 'react-i18next';
 import Formatter from '../../../util/model/Formatter';
 import { useHistory } from 'react-router-dom';
 import { getUrl } from '../../../util/browser/BrowserProvider';
+import '@ui5/webcomponents/dist/Assets';
+import '@ui5/webcomponents-react/dist/Assets';
 
 /**
  * Custom object status to display formatted numbers with semantic colors
