@@ -59,7 +59,7 @@ const Details = ({ match }) => {
 
   useEffect(() => {
     if (!oCountry) {
-      var sPath = Request.createKey('CountriesSet', sObjectId);
+      var sPath = Request.createKey('CountriesSet', sObjectId, 'yesterday');
       Request.readSingle(sPath).then((oResponse) => {
         setEntity(oResponse.data);
       });
@@ -84,6 +84,7 @@ const Details = ({ match }) => {
           title={oCountry.country}
           subTitle={t(sContinent)}
           selectedSectionId="dataSection"
+          style={{ height: '100vh' }}
         >
           <ObjectPageSection aria-label={t('countryData')} id="dataSection" title={t('countryData')}>
             <DataSection data={oCountry} />

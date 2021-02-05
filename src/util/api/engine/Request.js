@@ -10,7 +10,7 @@ const URLs = {
   ContinentsSet: '/continents?yesterday=true&sort=todayCases',
   CountriesSet: '/countries/',
   HistoricalSet: '/historical/',
-  TopCountriesPerCasesSet: '/countries?sort=cases',
+  TopCountriesPerCasesSet: '/countries?yesterday=true&sort=cases',
 };
 
 const Api = axios.create({
