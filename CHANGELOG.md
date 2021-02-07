@@ -14,21 +14,21 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** set initial fiori translations ([22d0395](https://github.com/tomasanchez/covid19/commit/22d0395cce1fb103a571d63ae1460715755f7722))
 
-### [v1.0.2](https://github.com/tomasanchez/covid19/compare/v0.1.4...v1.0.2) (2021-02-05)
+## [1.0.2](https://github.com/tomasanchez/covid19/compare/v0.1.4...v1.0.2) (2021-02-05)
 
 
 ### Bug Fixes
 
 - add yesterday to data details ([7fa4625](https://github.com/tomasanchez/covid19/commit/7fa4625953963fa58ce6440528653cdcfd7ca861))
 
-### [v1.0.1](https://github.com/tomasanchez/covid19/compare/v0.1.3...v0.1.4) (2021-02-02)
+## [1.0.1](https://github.com/tomasanchez/covid19/compare/v0.1.3...v0.1.4) (2021-02-02)
 
 ### Bug Fixes
 
 - add chart missing-translations ([b908b15](https://github.com/tomasanchez/covid19/commit/b908b15a718cc88863aab9a4a3faa1cced0b8085))
 - table headers now display correctly ([b156f57](https://github.com/tomasanchez/covid19/commit/b156f57857a9f9e8cc29208c1196cb551ae68fab))
 
-### [v1.0.0](https://github.com/tomasanchez/covid19/compare/v0.1.2...v0.1.3) (2021-01-31)
+## [1.0.0](https://github.com/tomasanchez/covid19/compare/v0.1.2...v0.1.3) (2021-01-31)
 
 
 ### Features
@@ -46,14 +46,14 @@ All notable changes to this project will be documented in this file. See [standa
 - historical data object ([dfc2aba](https://github.com/tomasanchez/covid19/commit/dfc2aba94f34060335d0151922455a8e3998ae55))
 - width change ([425e781](https://github.com/tomasanchez/covid19/commit/425e781b23d0c90ee256203eb2b5ba233e23ec58))
 
-### [v0.0.1](https://github.com/tomasanchez/covid19/compare/v0.1.1...v0.1.2) (2021-01-28)
+## [0.0.1](https://github.com/tomasanchez/covid19/compare/v0.1.1...v0.1.2) (2021-01-28)
 
 
 ### Bug Fixes
 
 - add country validation ([bc0ba6d](https://github.com/tomasanchez/covid19/commit/bc0ba6d558c688633e7bf7ab61abac4e44a8c9ea))
 
-### v0.0.0-1 (2021-01-27)
+## Initial Release (2021-01-27)
 
 
 ### Features
