@@ -14,11 +14,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** set initial fiori translations ([22d0395](https://github.com/tomasanchez/covid19/commit/22d0395cce1fb103a571d63ae1460715755f7722))
 
-# Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 ### [v1.0.2](https://github.com/tomasanchez/covid19/compare/v0.1.4...v1.0.2) (2021-02-05)
+
 
 ### Bug Fixes
 
@@ -32,6 +29,7 @@ All notable changes to this project will be documented in this file. See [standa
 - table headers now display correctly ([b156f57](https://github.com/tomasanchez/covid19/commit/b156f57857a9f9e8cc29208c1196cb551ae68fab))
 
 ### [v1.0.0](https://github.com/tomasanchez/covid19/compare/v0.1.2...v0.1.3) (2021-01-31)
+
 
 ### Features
 
@@ -50,11 +48,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [v0.0.1](https://github.com/tomasanchez/covid19/compare/v0.1.1...v0.1.2) (2021-01-28)
 
+
 ### Bug Fixes
 
 - add country validation ([bc0ba6d](https://github.com/tomasanchez/covid19/commit/bc0ba6d558c688633e7bf7ab61abac4e44a8c9ea))
 
-### v0.1.0 (2021-01-27)
+### v0.0.0-1 (2021-01-27)
+
 
 ### Features
 
