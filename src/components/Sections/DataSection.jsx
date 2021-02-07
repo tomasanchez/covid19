@@ -10,7 +10,7 @@ const DataSection = ({ data }) => {
   const { t } = useTranslation();
 
   return (
-    <Form title={t('countryData')} columnsL={4} columnsS={2} columnsM={2} columnsXL={3} labelSpanL={6} labelSpanM={6} labelSpanXL={6}>
+    <Form title={t('countryData')} columnsL={4} columnsS={2} columnsM={2} columnsXL={4} labelSpanL={6} labelSpanM={6} labelSpanXL={6}>
       <FormItem label={t('populationLabel')}>
         <ObjectStatus icon={<Icon name="group" />} state="Information">
           {Formatter.localeNumber(data.population)}
