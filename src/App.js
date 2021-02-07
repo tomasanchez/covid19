@@ -7,6 +7,10 @@ import ErrorBoundary from './pages/Fallback/ErrorBoundary';
 import Shell from './components/Shell/Shell';
 import Routes from './routes/Routes';
 
+import '@ui5/webcomponents/dist/Assets.js';
+import '@ui5/webcomponents-fiori/dist/Assets.js';
+import '@ui5/webcomponents-react/dist/Assets';
+
 import './App.css';
 
 const App = () => {
