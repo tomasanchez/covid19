@@ -9,12 +9,12 @@ import translationES from '../locales/es/translation.json';
 const SUPPORTED_LANGUAGES = {
   en: {
     translation: translationEN,
-    code: 'en-US',
+    code: 'en',
     textKey: 'shell.button.user.settings.item.languageSwitch.en',
   },
   es: {
     translation: translationES,
-    code: 'es-AR',
+    code: 'es',
     textKey: 'shell.button.user.settings.item.languageSwitch.es',
   },
 };

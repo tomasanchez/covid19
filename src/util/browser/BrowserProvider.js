@@ -10,6 +10,7 @@ const URLs = {
   NOT_FOUND: '/notFound',
   BUGGY: '/buggy',
   ANY: '/*',
+  LANGUAGE: '?sap-ui-language=:id',
 };
 
 export const getUrl = (key, replaceOptions) => {
