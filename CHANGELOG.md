@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/tomasanchez/covid19/compare/v1.0.3...v1.1.0) (2021-02-07)
+
+
+### Features
+
+* **lang:** add fiori translations ([0bb9fd6](https://github.com/tomasanchez/covid19/commit/0bb9fd62995f13be5db2f53919ec57a0d7d284bf))
+
+
+### Bug Fixes
+
+* **lang:** set initial fiori translations ([22d0395](https://github.com/tomasanchez/covid19/commit/22d0395cce1fb103a571d63ae1460715755f7722))
+
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ### [v1.0.2](https://github.com/tomasanchez/covid19/compare/v0.1.4...v1.0.2) (2021-02-05)
 
 ### Bug Fixes
