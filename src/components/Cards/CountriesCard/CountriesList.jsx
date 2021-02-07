@@ -39,7 +39,10 @@ const CountriesList = ({ items }) => {
   }, [aCountries.length, items]);
 
   const onNavTo = (oEvent) => {
-    history.push(getUrl('DETAILS', [{ value: oEvent.detail.item.dataset.id }]));
+    history.push({
+      pathname: getUrl('DETAILS', [{ value: oEvent.detail.item.dataset.id }]),
+      search: history.location.search,
+    });
   };
 
   return (

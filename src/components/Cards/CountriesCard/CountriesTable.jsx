@@ -92,7 +92,10 @@ const CountriesTable = ({ items }) => {
   const history = useHistory();
 
   const onNavTo = (oEvent) => {
-    history.push(getUrl('DETAILS', [{ value: oEvent.detail.row.original.country }]));
+    history.push({
+      pathname: getUrl('DETAILS', [{ value: oEvent.detail.row.original.country }]),
+      search: history.location.search,
+    });
   };
 
   return (
