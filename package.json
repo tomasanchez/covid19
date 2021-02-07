@@ -1,6 +1,6 @@
 {
   "name": "covid19-pandemic-dashboard",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "homepage": "http://tomasanchez.github.io/covid19",
   "private": true,
   "dependencies": {
