@@ -1,2 +1,0 @@
-(this["webpackJsonpcovid19-pandemic-dashboard"]=this["webpackJsonpcovid19-pandemic-dashboard"]||[]).push([[9],{1237:function(t,a,e){"use strict";e.r(a);var n=e(12),c=(e(5),e(177)),o=e(815),d=e.p+"static/media/notfound2.36a4779c.png",i=e(354);a.default=function(){var t=Object(o.a)().t;return Object(n.jsxs)(n.Fragment,{children:[Object(n.jsx)(c.a,{title:t("helmet.title.notfound")}),Object(n.jsx)(i.a,{image:d,altImage:t("page.notfound.alt"),text:t("page.notfound.text")})]})}}}]);
-//# sourceMappingURL=9.738fc8a3.chunk.js.map
