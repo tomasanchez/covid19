@@ -1,12 +1,10 @@
 import { getUrl as getUrlProvider } from '../URLProvider';
 
 const URLs = {
-  HOME: '/covid19/',
-  OVERVIEW: '/covid19/overview',
-  DETAILS: '/covid19/overview/details/:id',
-  TODO_DETAIL: '/todo/detail/:id',
-  TODO_EDIT: '/todo/edit/:id',
-  TODO_LIST: '/todo/all',
+  BASEURL: '/covid19',
+  HOME: '/',
+  OVERVIEW: '/overview',
+  DETAILS: '/overview/details/:id',
   NOT_FOUND: '/notFound',
   BUGGY: '/buggy',
   ANY: '/*',
