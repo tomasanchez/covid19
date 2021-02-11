@@ -19,7 +19,7 @@ const style = {
   },
 
   allCountriesCard: {
-    width: window.innerWidth >= 768 ? '40vw' : '95vw',
+    width: window.innerWidth >= 768 ? '635px' : '95vw',
     height: '27.35rem',
   },
 };

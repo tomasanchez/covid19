@@ -46,9 +46,12 @@ const Columns = () => {
     {
       Header: t('countryColumnHeader'),
       accessor: 'countryInfo.flag',
+      width: 250,
+      minWidth: 250,
+      disableResizing: true,
       Cell: (cell) => {
         return (
-          <FlexBox alignItems={FlexBoxAlignItems.Center} wrap={FlexBoxWrap} style={spacing.sapUiContentPadding}>
+          <FlexBox alignItems={FlexBoxAlignItems.Center} wrap={FlexBoxWrap} style={{ marginBottom: '1,5rem' }}>
             <img alt={t('loadingFlag')} src={cell.value} height="30px" width="45px" />
             <Title level={TitleLevel.H6} style={spacing.sapUiContentPadding}>
               {cell.cell.row.original.country}
@@ -59,6 +62,9 @@ const Columns = () => {
     },
     {
       Header: t('casesColumnHeader'),
+      responsivePopIn: true,
+      responsiveMinWidth: 200,
+      minWidth: 150,
       accessor: 'cases',
       Cell: (cell) => {
         return <ObjectNumber formatter={Formatter.covidCasesCountries} value={cell.value} />;
@@ -67,6 +73,8 @@ const Columns = () => {
     {
       Header: t('recoveredColumnHeader'),
       accessor: 'recovered',
+      responsivePopIn: true,
+      responsiveMinWidth: 550,
       Cell: (cell) => {
         return <ObjectNumber formatter={Formatter.covidRecovered} fvalue={(cell.value * 100) / cell.cell.row.original.cases} value={cell.value} ttip={t('recoveredTooltip')} />;
       },
@@ -74,6 +82,8 @@ const Columns = () => {
     {
       Header: t('deceasesColumnHeader'),
       accessor: 'deaths',
+      responsivePopIn: true,
+      responsiveMinWidth: 600,
       Cell: (cell) => {
         return <ObjectNumber value={cell.value} />;
       },
@@ -98,11 +108,7 @@ const CountriesTable = ({ items }) => {
     });
   };
 
-  return (
-    <FlexBox fitContainer={true} wrap={FlexBoxWrap}>
-      <AnalyticalTable onRowClick={onNavTo} data={items} columns={Columns()} visibleRows={7} scaleWidthMode="Smart" />
-    </FlexBox>
-  );
+  return <AnalyticalTable style={{ width: '100vw' }} rowHeight={60} onRowClick={onNavTo} data={items} columns={Columns()} visibleRows={7} scaleWidthMode="Smart" />;
 };
 
 export default CountriesTable;
